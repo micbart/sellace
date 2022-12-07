@@ -1,14 +1,29 @@
 <?php
 
-namespace Sellace\App;
+namespace Sellace\App\Acf;
 
 class AcfOptions
 {
     public function __construct()
     {
+        add_filter('acf/settings/save_json', [$this, 'acfJsonSave']);
+        add_filter('acf/settings/load_json', [$this, 'acfJsonLoad']);
         add_filter('gutenberg_can_edit_post_type', [$this, 'disableGutenberg'], 10, 2);
         add_filter('use_block_editor_for_post_type', [$this, 'disableGutenberg'], 10, 2 );
         add_action('admin_head', [$this, 'disableClassicEditor']);
+    }
+
+    function acfJsonSave($path)
+    {
+        $path = get_stylesheet_directory() . '/acf-json';
+        return $path;   
+    }
+    
+    function acfJsonLoad($paths) 
+    {
+        unset($paths[0]);
+        $paths[] = get_stylesheet_directory() . '/acf-json';
+        return $paths;
     }
 
     function disableEditor( $id = false ) {

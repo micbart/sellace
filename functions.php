@@ -177,6 +177,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-if (class_exists('ACF')) {
-	require get_template_directory() . '/inc/App/Acf.php';
+if(!class_exists('ACF') && !is_admin()) {
+	die('Install ACF PLUGIN');
 }
+require get_template_directory() . '/inc/App/Loader.php';

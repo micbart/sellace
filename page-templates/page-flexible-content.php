@@ -5,7 +5,7 @@
  * @package sellace
  */
 
-use Sellace\App\AcfOptions;
+use Sellace\App\Acf\AcfOptions;
 
 get_header();
 ?>
