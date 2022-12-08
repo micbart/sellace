@@ -17,6 +17,7 @@ class Loader
     {
         require get_template_directory() . '/inc/App/Acf/AcfOptions.php';
         require get_template_directory() . '/inc/App/Helpers/Media.php';
+        require get_template_directory() . '/inc/App/Helpers/Footer.php';
     }
 
     public function initClasses()

@@ -1,0 +1,160 @@
+.container {
+    margin: 0 auto;
+    max-width: $width-xl;
+
+    @include media-breakpoint-down(lg) {
+        max-width: $width-md;
+        padding: 0 16px;
+    }
+}
+
+.flex{
+    display: flex;
+
+    &.flex-wrap{
+        flex-wrap: wrap;
+        margin: 0 -.5rem;
+
+        > *{
+            padding: 0 .5rem;
+            flex: 0 0 auto;
+            max-width: 100%;
+        }
+
+    }
+
+    &-justify-between {
+        justify-content: space-between;
+    }
+
+    &-justify-end {
+        justify-content: flex-end;
+    }
+
+    &-alings-center{
+        align-items: center;
+    }
+
+    &-alings-end{
+        align-items: flex-end;
+    }
+
+    &-12{
+        width: 100%;
+    }
+
+    &-10{
+        width: 83.333333333333334%;
+    }
+
+    &-9{
+        width: 75%;
+    }
+
+    &-8{
+        width: 66.66666666666667%;
+    }
+
+    &-7{
+        width: 58.333333333333334%;
+    }
+    
+    &-6{
+        width: 50%;
+    }
+
+    &-5{
+        width: 41.66666666666667%;
+    }
+
+    &-4{
+        width: 33.333333333333334%;
+    }
+
+    &-3{
+        width: 25%
+    }
+
+    &-2{
+        width: 16.66666666666667%;
+    }
+
+    @include media-breakpoint-up(sm){
+                
+        &-sm-10{
+            width: 83.333333333333334%;
+        }
+
+        &-sm-9{
+            width: 75%;
+        }
+
+        &-sm-8{
+            width: 66.66666666666667%;
+        }
+
+        &-sm-7{
+            width: 58.333333333333334%;
+        }
+        
+        &-sm-6{
+            width: 50%;
+        }
+
+        &-sm-5{
+            width: 41.66666666666667%;
+        }
+
+        &-sm-4{
+            width: 33.333333333333334%;
+        }
+
+        &-sm-3{
+            width: 25%
+        }
+
+        &-sm-2{
+            width: 16.66666666666667%;
+        }
+
+        .d-to-sm-none{
+            display: none;
+        }
+
+        &-sm-justify-between {
+            justify-content: space-between;
+        }
+    
+        &-sm-justify-end {
+            justify-content: flex-end;
+        }
+    
+        &-sm-alings-center{
+            align-items: center;
+        }
+    
+        &-sm-alings-end{
+            align-items: flex-end;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm){
+    .order-small-2{
+        order: 2;
+    }
+
+    .order-small-1{
+        order: 1;
+    }
+}
+
+.d-block {
+    display: block;
+}
+
+@include media-breakpoint-up(sm) {
+    .d-sm-inline-block {
+        display: inline-block;
+    }
+}

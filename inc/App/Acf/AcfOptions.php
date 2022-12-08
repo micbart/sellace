@@ -11,6 +11,7 @@ class AcfOptions
         add_filter('gutenberg_can_edit_post_type', [$this, 'disableGutenberg'], 10, 2);
         add_filter('use_block_editor_for_post_type', [$this, 'disableGutenberg'], 10, 2 );
         add_action('admin_head', [$this, 'disableClassicEditor']);
+        $this->pageOptions();
     }
 
     function acfJsonSave($path)
@@ -74,6 +75,18 @@ class AcfOptions
                     get_template_part('acf-flexible-content/heroBanner');
                 }
             }
+        }
+    }
+
+    public function pageOptions() {
+        if(function_exists('acf_add_options_page')) {
+            acf_add_options_page([
+                'page_title' =>  __('Theme options', 'sellace'),
+                'menu_title' => __('Theme options', 'sellace'),
+                'menu_slug' => 'theme-options',
+                'capability' => 'install_themes',
+                'redirect' => false
+            ]);
         }
     }
 }

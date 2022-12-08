@@ -11,3 +11,11 @@ $columns: (
 );
 
 $columns__margin: 3.8%;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 768px,
+	md: 992px,
+	lg: 1168px,
+	xl: 1344px,
+)

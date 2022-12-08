@@ -1,0 +1,64 @@
+.site-header {
+    background: $gradient;
+    padding: 28px 0;
+    position: relative;
+
+    @include media-breakpoint-down(sm) {
+        .menu-header-container {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            padding: $space-sm 16px;
+            background: $white;
+        }   
+    }
+}
+
+.site-branding {
+    max-width: 188px;
+    width: 100%;
+}
+
+.menu-toggle {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 22px;
+        height: 2px;
+        background-color: $white;
+        display: block;
+        transition: 0.2s ease-in-out;
+
+        &:first-child {
+            transform: translate(-50%, calc(-50% - 5px));
+        }
+
+        &:last-child {
+            transform: translate(-50%, calc(-50% + 5px));
+        }
+    }
+
+    &[aria-expanded="true"] {
+        span {
+            &:first-child {
+                transform: translate(-50%, -50%) rotate(45deg)
+            }  
+    
+            &:last-child {
+                transform: translate(-50%, -50%) rotate(-45deg)
+            }
+        }
+    }
+
+}

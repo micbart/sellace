@@ -19,3 +19,15 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+
+.btn {
+	display: inline-block;
+	padding: 12px 24px;
+	font-size: $font-size-normal;
+	border: 1px solid;
+	color: $white;
+
+	&-white-outline {
+		border-color: $white;
+	}
+}
