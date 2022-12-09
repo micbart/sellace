@@ -26,8 +26,24 @@ input[type="submit"] {
 	font-size: $font-size-normal;
 	border: 1px solid;
 	color: $white;
+	text-decoration: none;
 
-	&-white-outline {
+	&-secondary {
 		border-color: $white;
+
+		&:hover {
+			background-color: $light-white;
+		}
+	}
+
+	&-primary {
+		background-color: $primary;
+		border-color: $primary;
+
+		&:hover {
+			color: $white;
+			background-color: $primary-dark;
+			border-color: $primary-dark;
+		}
 	}
 }

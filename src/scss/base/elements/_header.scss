@@ -1,6 +1,6 @@
 .site-header {
     background: $gradient;
-    padding: 28px 0;
+    padding: $space-sm 0;
     position: relative;
 
     @include media-breakpoint-down(sm) {
@@ -9,9 +9,18 @@
             left: 0;
             top: 100%;
             width: 100%;
-            padding: $space-sm 16px;
             background: $white;
+
+            ul {
+                padding: $space-sm 16px;
+            }
         }   
+    }
+}
+
+.page-template-page-flexible-content {
+    .site-header {
+        background: transparent;
     }
 }
 
@@ -38,7 +47,7 @@
         height: 2px;
         background-color: $white;
         display: block;
-        transition: 0.2s ease-in-out;
+        transition: $tranistion;
 
         &:first-child {
             transform: translate(-50%, calc(-50% - 5px));

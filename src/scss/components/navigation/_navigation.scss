@@ -100,13 +100,21 @@
 	}
 
 	.main-navigation li.nav-button {
-		margin-left: $space-lg;
-		display: inline-block;
-		padding: 12px 24px;
-		font-size: $font-size-normal;
-		border: 1px solid;
-		color: $white;
-		border-color: $white;
+		margin-left: $space-xl;
+		
+		a {
+			display: inline-block;
+			padding: 12px 24px;
+			font-size: $font-size-normal;
+			border: 1px solid;
+			color: $white;
+			border-color: $white;
+			
+			&:hover {
+				background-color: $light-white;
+			}
+		}
+
 	}
 }
 

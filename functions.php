@@ -181,4 +181,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if(!class_exists('ACF') && !is_admin()) {
 	die('Install ACF PLUGIN');
 }
+
 require get_template_directory() . '/inc/App/Loader.php';

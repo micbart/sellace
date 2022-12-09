@@ -1,0 +1,48 @@
+.hero {
+    margin-top: -98px;
+    padding-top: 98px;
+    background: $gradient;
+    color: $white;
+
+    @include media-breakpoint-down(sm) {
+        padding: calc(98px + $space-md) 0 $space-lg;
+    }
+
+    &__image {
+        text-align: center;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: $space-md;
+        }
+    }
+
+    &--title {
+        margin: 0;
+        font-size: $font-hero;
+
+        @include media-breakpoint-down(xl) {
+            font-size: $font-small-hero;
+        }
+    }
+
+    &--content {
+        margin: $space-xs 0 0;
+        max-width: 85%;
+        font-size: $font-size-normal;
+        @include opacity-white;
+    }
+
+    &__buttons {
+        margin-top: $space-lg;
+
+        a:not(.btn) {
+            color: $white;
+            text-decoration: none;
+            font-size: $font-size-normal;
+        }
+
+        a:not(:last-child) {
+            margin-right: $space-md;
+        }
+    }
+}
