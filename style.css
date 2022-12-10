@@ -1141,13 +1141,20 @@ textarea {
 }
 
 .hero {
-	margin-top: -98px;
-	padding-top: 98px;
 	background: radial-gradient(45% 104.25% at 85.62% 105.07%, rgba(0, 135, 254, 0.2) 0%, rgba(0, 135, 254, 0) 100%), #1F1F1D;
 	color: #ffffff;
 }
 @media (max-width: 767.98px) {
 	.hero {
+		padding: 32px 0 48px;
+	}
+}
+.hero.offset {
+	margin-top: -98px;
+	padding-top: 98px;
+}
+@media (max-width: 767.98px) {
+	.hero.offset {
 		padding: 130px 0 48px;
 	}
 }

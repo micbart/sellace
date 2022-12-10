@@ -92,6 +92,26 @@
                             "placeholder": ""
                         },
                         {
+                            "key": "field_6394335e99a7c",
+                            "label": "Enable section offset",
+                            "name": "enable_section_offset",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_63938c69213ec",
                             "label": "Content",
                             "name": "",
@@ -231,8 +251,8 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "primary": "primary",
-                                        "secondary": "secondary",
+                                        "btn btn-primary": "btn btn-primary",
+                                        "btn btn-secondary": "btn btn-secondary",
                                         "none": "none"
                                     },
                                     "default_value": false,
@@ -274,5 +294,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670615146
+    "modified": 1670656894
 }

@@ -1,11 +1,18 @@
 .hero {
-    margin-top: -98px;
-    padding-top: 98px;
     background: $gradient;
     color: $white;
 
     @include media-breakpoint-down(sm) {
-        padding: calc(98px + $space-md) 0 $space-lg;
+        padding: $space-md 0 $space-lg;
+    }
+
+    &.offset {
+        margin-top: -98px;
+        padding-top: 98px;
+
+        @include media-breakpoint-down(sm) {
+            padding: calc(98px + $space-md) 0 $space-lg;
+        }
     }
 
     &__image {

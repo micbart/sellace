@@ -3,10 +3,10 @@
 use Sellace\App\Acf\Blocks\Hero;
 
 $fields = (new Hero())->getFields();
-// var_dump($fields);
+
 ?>
 
-<section class="hero">
+<section class="hero<?php if($fields['sectionOffset']) echo ' offset'; ?>">
     <div class="container">
         <div class="flex flex-wrap flex-alings-center">
             <div class="flex-12 flex-sm-6 <?php if($fields['image']['position'] == 'left') echo 'order-2'; ?>">

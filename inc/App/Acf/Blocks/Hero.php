@@ -18,7 +18,8 @@ class Hero extends Blocks
                 'style' => get_sub_field('style_title')
             ],
             'content' => get_sub_field('content'),
-            'buttons' => get_sub_field('buttons') ?: []
+            'buttons' => get_sub_field('buttons') ?: [],
+            'sectionOffset' => get_sub_field('enable_section_offset') ?: false
         ];
     }
 }
