@@ -24,6 +24,7 @@ class Loader
         require get_template_directory() . '/inc/App/Acf/Blocks/BannerList.php';
         require get_template_directory() . '/inc/App/Acf/Blocks/Numbers.php';
         require get_template_directory() . '/inc/App/Acf/Blocks/IconBoxes.php';
+        require get_template_directory() . '/inc/App/Acf/Blocks/Blog.php';
     }
 
     public function initClasses()

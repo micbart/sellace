@@ -79,6 +79,8 @@ class AcfOptions
                     get_template_part('acf-flexible-content/numbers');
                 }elseif(get_row_layout() == 'icon_boxes') {
                     get_template_part('acf-flexible-content/iconBoxes');
+                }elseif(get_row_layout() == 'blog') {
+                    get_template_part('acf-flexible-content/blog');
                 }
             }
         }

@@ -21,7 +21,6 @@
 
     &__item {
         margin: 0 0 $space-lg;
-        padding: 0 $space-sm;
 
         @include media-breakpoint-down(md) {
             padding: 0 8px;

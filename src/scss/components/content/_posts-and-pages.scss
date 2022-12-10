@@ -21,3 +21,41 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+@include media-breakpoint-up(sm) {
+	.flex.flex-wrap .content-post {
+		max-width: calc(50% - $space-md);
+	}
+}
+
+
+@include media-breakpoint-up(md) {
+	.flex.flex-wrap .content-post {
+		max-width: calc(33.333333333333334% - $space-md);
+	}
+}
+
+.content-post {
+	.post-thumbnail {
+		margin-bottom: $space-md;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.entry-title {
+		margin: 0;
+		font-size: $font-title;
+
+		a{
+			color: $dark;
+			text-decoration: none;
+		}
+	}
+
+	.entry-footer {
+		margin-top: $space-xs;
+		color: $gray;
+	}
+}

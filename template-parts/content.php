@@ -8,56 +8,31 @@
  */
 
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
+<div class="flex-12 flex-sm-6 flex-md-4 content-post">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<header class="entry-header">
+			<?php
+				echo '<a href="' . esc_url(get_permalink()) . '" title="' . get_the_title() . '">';
+					sellace_post_thumbnail();
+				echo '</a>';
 			?>
-			<div class="entry-meta">
-				<?php
-				sellace_posted_on();
-				sellace_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+		</header>
 
-	<?php sellace_post_thumbnail(); ?>
+		<div class="entry-content">
+			<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+		</div>
 
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'sellace' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
+		<footer class="entry-footer">
+			<div class="flex flex-wrap flex-alings-center">
+				<div class="flex-6">
+					<?php sellace_posted_on() ?>
+				</div>
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sellace' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
+				<div class="flex-6 flex flex-justify-end">
+					<?php echo '<a href="' . esc_url( get_permalink() ) . '" title="' . get_the_title() . '" class="btn-arrow">' . __('Read', 'sellace') . '</a>'; ?>
+				</div>
+			</div>
+		</footer>
+	</article>
+</div>
 
-	<footer class="entry-footer">
-		<?php sellace_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->

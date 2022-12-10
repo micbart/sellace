@@ -1,0 +1,36 @@
+.latest-blog {
+    padding: $space-xxl 0;
+
+    &--title {
+        margin: 0;
+        font-size: $font-small-hero;
+
+        @include media-breakpoint-down(md) {
+            font-size: $font-title-small;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: $space-xs;
+        }
+    }
+
+    &__posts {
+        margin-top: $space-xl;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: $space-md;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .content-post:nth-child(3) {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .content-post:nth-child(3) {
+            display: block;
+        }
+    }
+}

@@ -47,3 +47,23 @@ input[type="submit"] {
 		}
 	}
 }
+
+.btn-arrow {
+	display: inline-block;
+	color: $dark;
+	font-size: $font-size-normal;
+	font-weight: $font-bold;
+	position: relative;
+	padding-right: 22px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 14px;
+		height: 14px;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		background-image: url('~/assets/img/arrow.svg');
+	}
+}

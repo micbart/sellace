@@ -13,14 +13,14 @@
 
     &.flex-wrap{
         flex-wrap: wrap;
-        margin: 0 -.5rem;
+        margin-left: -$space-xs;
+        margin-right: -$space-xs;
 
         > *{
-            padding: 0 .5rem;
+            padding: 0 $space-xs;
             flex: 0 0 auto;
             max-width: 100%;
         }
-
     }
 
     &-justify-between {
@@ -137,7 +137,14 @@
             align-items: flex-end;
         }
     }
+
+    @include media-breakpoint-up(md){
+        &-md-4{
+            width: 33.333333333333334%;
+        }
+    }
 }
+
 
 .order-2{
     order: 2;
