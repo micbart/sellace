@@ -1313,6 +1313,61 @@ textarea {
 	}
 }
 
+.icon-boxes {
+	padding: 72px 0 24px;
+	text-align: center;
+}
+.icon-boxes--title {
+	margin: 0;
+	font-size: 32px;
+}
+@media (max-width: 991.98px) {
+	.icon-boxes--title {
+		font-size: 24px;
+	}
+}
+.icon-boxes__icons {
+	margin-top: 64px;
+}
+@media (max-width: 767.98px) {
+	.icon-boxes__icons {
+		margin-top: 24px;
+	}
+}
+.icon-boxes__item {
+	margin: 0 0 48px;
+	padding: 0 24px;
+}
+@media (max-width: 991.98px) {
+	.icon-boxes__item {
+		padding: 0 8px;
+	}
+}
+.icon-boxes__item--icon img,
+.icon-boxes__item--icon svg {
+	width: 48px;
+	height: 48px;
+}
+@media (max-width: 767.98px) {
+	.icon-boxes__item--icon img,
+	.icon-boxes__item--icon svg {
+		width: 32px;
+		height: 32px;
+	}
+}
+.icon-boxes__item--title {
+	margin: 16px 0 0;
+	font-size: 20px;
+}
+@media (max-width: 991.98px) {
+	.icon-boxes__item--title {
+		font-size: 16px;
+	}
+}
+.icon-boxes__item--desc {
+	margin: 8px 0 0;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

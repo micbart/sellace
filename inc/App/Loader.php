@@ -23,6 +23,7 @@ class Loader
         require get_template_directory() . '/inc/App/Acf/Blocks/Hero.php';
         require get_template_directory() . '/inc/App/Acf/Blocks/BannerList.php';
         require get_template_directory() . '/inc/App/Acf/Blocks/Numbers.php';
+        require get_template_directory() . '/inc/App/Acf/Blocks/IconBoxes.php';
     }
 
     public function initClasses()

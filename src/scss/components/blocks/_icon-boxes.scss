@@ -1,0 +1,56 @@
+.icon-boxes {
+    padding: $space-xxl 0 $space-sm;
+    text-align: center;
+
+    &--title {
+        margin: 0;
+        font-size: $font-small-hero;
+
+        @include media-breakpoint-down(md) {
+            font-size: $font-title-small;
+        }
+    }
+
+    &__icons {
+        margin-top: $space-xl;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: $space-sm;
+        }
+    }
+
+    &__item {
+        margin: 0 0 $space-lg;
+        padding: 0 $space-sm;
+
+        @include media-breakpoint-down(md) {
+            padding: 0 8px;
+        }
+
+        &--icon {
+            img,
+            svg {
+                width: $space-lg;
+                height: $space-lg;
+
+                @include media-breakpoint-down(sm) {
+                    width: $space-md;
+                    height: $space-md;
+                }
+            }
+        }
+
+        &--title {
+            margin: $space-xs 0 0;
+            font-size: $font-title;
+
+            @include media-breakpoint-down(md) {
+                font-size: $font-size-normal;
+            }
+        }
+
+        &--desc {
+            margin: 8px 0 0;
+        }
+    }
+}
