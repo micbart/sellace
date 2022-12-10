@@ -1,0 +1,57 @@
+.numbers {
+    padding: $space-xxl 0;
+    background: $gradient;
+
+    &__item {
+        color: $white;
+        padding-left: $space-xs;
+
+        @include media-breakpoint-down(md) {
+            max-width: 90%;
+        }
+
+        &--number {
+            margin: 0;
+            font-size: $font-title-small;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                left: -$space-xs;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 8px;
+                background-color: $primary;
+            }
+
+            @include media-breakpoint-down(md) {
+                font-size: $font-title;
+            }
+        }
+
+        &--desc {
+            margin: $space-xs 0 $space-md;
+            @include opacity-white;
+        }
+    }
+
+    &__button {
+        margin-top: $space-md;
+        padding-top: $space-lg;
+        text-align: right;
+        border-top: 1px solid $light-white;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: $space-xs;
+            padding-top: $space-md;
+            text-align: center;
+
+            a {
+                width: 100%;
+            }
+        }
+    }
+}

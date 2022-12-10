@@ -73,6 +73,10 @@ class AcfOptions
 
                 if(get_row_layout() == 'hero_banner') {
                     get_template_part('acf-flexible-content/heroBanner');
+                }elseif(get_row_layout() == 'banner_with_list') {
+                    get_template_part('acf-flexible-content/bannerList');
+                }elseif(get_row_layout() == 'numbers') {
+                    get_template_part('acf-flexible-content/numbers');
                 }
             }
         }

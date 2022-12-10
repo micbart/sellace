@@ -27,7 +27,7 @@
         margin: 0;
         font-size: $font-hero;
 
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-down(md) {
             font-size: $font-small-hero;
         }
     }

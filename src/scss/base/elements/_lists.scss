@@ -24,3 +24,27 @@ dt {
 dd {
 	margin: 0 1.5em 1.5em;
 }
+
+ul.check-list {
+	margin: 0;
+	padding: 0 0 0 $space-md;
+	list-style: none;
+
+	li:not(:last-child) {
+		margin-bottom: $space-xs;
+	}
+
+	li {
+		position: relative;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			left: -$space-md;
+			width: $space-sm;
+			height: $space-sm;
+			background-image: url('~/assets/img/check.svg');
+		}
+	}
+}
