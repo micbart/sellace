@@ -1,10 +1,4 @@
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/style.scss ***!
-  \****************************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap);
-/*!********************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/style.scss (1) ***!
-  \********************************************************************************************************************************************************************************************************************/
 @charset "UTF-8";
 /*!
 Theme Name: sellace
@@ -1072,11 +1066,6 @@ textarea {
 	display: block;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
-}
-
 .updated:not(.published) {
 	display: none;
 }
@@ -1119,6 +1108,11 @@ textarea {
 .content-post .entry-footer {
 	margin-top: 16px;
 	color: #9B9B99;
+}
+@media (max-width: 768.98px) {
+	.content-post:not(:last-child) {
+		margin-bottom: 64px;
+	}
 }
 
 /* Comments
@@ -1543,5 +1537,3 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
-
-/*# sourceMappingURL=style.css.map*/

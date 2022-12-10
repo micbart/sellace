@@ -2,11 +2,6 @@
 	display: block;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
-}
-
 .updated:not(.published) {
 	display: none;
 }
@@ -57,5 +52,11 @@
 	.entry-footer {
 		margin-top: $space-xs;
 		color: $gray;
+	}
+
+	@include media-breakpoint-down(sm) {
+		&:not(:last-child) {
+			margin-bottom: $space-xl;
+		}
 	}
 }
